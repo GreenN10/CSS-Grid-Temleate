@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container{
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    
+    "nav nav nav "
+    "sidebar content-1 content-1"
+    "sidebar content-2 content-3"
+    "footer footer footer"
+    ;
+
+    gap: 20px;
+    /* row-gap: 10px; */
+
+     grid-template-rows: .5fr 1.5fr 1.5fr .8fr;
+
+     /* grid area ile belirlediğimiz sütün sayısından fazla
+     girersek extradan beyaz bir sütün açar bize o yüzden repeate kendi belirlediğimiz 
+     sütün sayısı girmmeiz lazım  */
+   /* grid-template-columns: repeat(4,1fr); */
+   grid-template-columns: repeat(3,1fr);
+
+}
+
+.navbar{
+    grid-area: nav;
+    background: linear-gradient(to right, rgba(0, 89, 255, 1),
+     rgba(255, 0, 128, 1));
+     padding: 0 15px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+
+    
+}
+
+
+.navbar .logo {
+    width: 200px;
+    /* bir divin uzunluğu  içindeki 
+    contentein uzunluğu kadardır */
+    height: 100%;
+    padding: 10px;
+    
+}
+
+.navbar .logo img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+
+}
+
+
+.navbar .menu a{
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    color: antiquewhite;
+}
+
+
+.navbar .menu a:hover{
+    /* text-decoration: underline; */
+    border-bottom: 1px solid white;
+    color: white;
+    
+}
+
+.sidebarHTML{
+    grid-area: sidebar;
+    /* background-color: green; */
+    background-image: url('https://images.unsplash.com/photo-1703015619478-0fe558ed7d05?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+background-size: cover;
+background-position: center;
+}
+
+
+.content1{
+    grid-area: content-1;
+    background-color: cadetblue;
+    position: relative;
+    background-size: cover;
+    /* background-image: url('https://images.unsplash.com/photo-1702750722255-93420fcd21f9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
+   background-image: url('https://images7.alphacoders.com/132/1328085.png');
+   background-position: center;
+   background-size: cover;
+   backdrop-filter: blur(7px);
+   
+}
+
+
+.content1 h2{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: -50% -50%;
+    color: palevioletred;
+}
+
+.content1 .kurslar {
+    display: flex;
+    list-style-type: none;
+    gap: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-30%,-50%);
+}
+.content1 .kurslar li a{
+    text-decoration: none;
+    color: purple;
+    
+}
+
+.content1 .kurslar li:hover a{
+    color: hotpink;
+    /* text-decoration: underline; */
+}
+
+.content1 .kurslar li {
+    padding: 10px;
+}
+
+.content1 .kurslar li:hover {
+    border-bottom: 1px solid hotpink;
+}
+
+.content1 .kurslar li:hover a {
+    color: hotpink;
+    /* text-decoration: underline; */
+}
+
+.content2{
+    grid-area: content-2;
+    background-color: cornflowerblue;
+}
+
+.content2 .profil-foto{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 50%;
+     overflow: hidden; 
+}
+
+.content2 .profil-foto img{
+    width: 100%;
+    height: 100%;
+}
+
+.content2 .yorum{
+    width: 200px;
+}
+
+.content3{
+    grid-area: content-3 ;
+    background-color: tomato;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+
+}
+
+.content3 .profil-foto{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 50%;
+     overflow: hidden; 
+}
+
+.content3 .profil-foto img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
+.content3 .yorum{
+    width: 200px;
+
+}
+
+
+
+.foot{
+    grid-area: footer;
+    background: linear-gradient(to right, rgba(0, 89, 255, 1),
+    rgba(255, 0, 128, 1));
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+
+}
+
+.foot
+
+
+
+.foot.footer.menu ul{
+    list-style-type: none;
+    color: antiquewhite;
+
+}
